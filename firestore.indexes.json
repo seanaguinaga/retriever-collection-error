@@ -1,16 +1,23 @@
 {
   "indexes": [
     {
-      "collectionGroup": "admins",
+      "collectionGroup": "berryMemories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "assignable",
+          "fieldPath": "cid",
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "display_name",
+          "fieldPath": "uid",
           "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "multimodalEmbedding001",
+          "vectorConfig": {
+            "dimension": 1408,
+            "flat": {}
+          }
         }
       ]
     },
@@ -24,92 +31,6 @@
             "dimension": 1408,
             "flat": {}
           }
-        }
-      ]
-    },
-    {
-      "collectionGroup": "insight",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "viewed",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "created",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "intervals",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "mode",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "start",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "users",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "is_beta_tester",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "email",
-          "order": "ASCENDING"
-        }
-      ]
-    }
-  ],
-  "fieldOverrides": [
-    {
-      "collectionGroup": "childs",
-      "fieldPath": "sweetspot.daysUsed",
-      "ttl": false,
-      "indexes": [
-        {
-          "order": "ASCENDING",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "order": "DESCENDING",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "arrayConfig": "CONTAINS",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "order": "ASCENDING",
-          "queryScope": "COLLECTION_GROUP"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "users",
-      "fieldPath": "ttlExpiry",
-      "ttl": true,
-      "indexes": [
-        {
-          "order": "ASCENDING",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "order": "DESCENDING",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "arrayConfig": "CONTAINS",
-          "queryScope": "COLLECTION"
         }
       ]
     }
