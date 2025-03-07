@@ -1,0 +1,24 @@
+{
+  "emulators": {
+    "auth": {
+      "port": 5000
+    },
+    "pubsub": {
+      "port": 5001
+    },
+    "database": {
+      "port": 5002
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "functions": [
+    {
+      "codebase": "sean-functions",
+      "name": "sean-functions",
+      "source": "./",
+      "runtime": "nodejs22"
+    }
+  ]
+}
