@@ -9,7 +9,8 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "genkit": "genkit start -- tsx --watch src/index.ts"
+    "genkit": "genkit start -- tsx --watch src/index.ts",
+    "emulate": "firebase emulators:start"
   },
   "engines": {
     "node": "22"

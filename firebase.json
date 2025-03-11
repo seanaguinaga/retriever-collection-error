@@ -1,17 +1,24 @@
 {
   "emulators": {
     "auth": {
-      "port": 5000
+      "port": 5003
     },
     "pubsub": {
       "port": 5001
     },
-    "database": {
-      "port": 5002
-    },
     "ui": {
       "enabled": true
-    }
+    },
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "storage": {
+      "port": 9199
+    },
+    "singleProjectMode": true
   },
   "functions": [
     {
@@ -20,5 +27,8 @@
       "source": "./",
       "runtime": "nodejs22"
     }
-  ]
+  ],
+  "storage": {
+    "rules": "storage.rules"
+  }
 }
